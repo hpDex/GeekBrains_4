@@ -14,16 +14,16 @@
 		4144848B27C39C6500BDFBCE /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144848A27C39C6500BDFBCE /* GroupTableViewCell.swift */; };
 		4144848D27C39C9000BDFBCE /* NewGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144848C27C39C9000BDFBCE /* NewGroupTableViewCell.swift */; };
 		4144848F27C39CBF00BDFBCE /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144848E27C39CBF00BDFBCE /* NewsTableViewCell.swift */; };
-		4149604B27F22DD6007BF140 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 4149604A27F22DD6007BF140 /* SwiftKeychainWrapper */; };
-		4149604E27F22DFF007BF140 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4149604D27F22DFF007BF140 /* Kingfisher */; };
-		4149605227F233B8007BF140 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4149605127F233B8007BF140 /* Realm */; };
-		4149605427F233B8007BF140 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4149605327F233B8007BF140 /* RealmSwift */; };
 		417A1DEC27D8F2D0003DF7FB /* SearchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A1DEB27D8F2D0003DF7FB /* SearchGroup.swift */; };
 		417A1DEE27D8F329003DF7FB /* RealmOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A1DED27D8F329003DF7FB /* RealmOperations.swift */; };
 		417A1DF027D90884003DF7FB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A1DEF27D90884003DF7FB /* Photo.swift */; };
 		417A1DF227D92359003DF7FB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417A1DF127D92359003DF7FB /* WebKit.framework */; };
 		419B807927F4CC00009C954E /* GroupFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B807827F4CC00009C954E /* GroupFirebase.swift */; };
 		41BB8A3027F4E3B900B18AE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BB8A2F27F4E3B900B18AE2 /* GoogleService-Info.plist */; };
+		41D42ECE27F9B7E600DABC47 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 41D42ECD27F9B7E600DABC47 /* Kingfisher */; };
+		41D42ED127F9B82400DABC47 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 41D42ED027F9B82400DABC47 /* SwiftKeychainWrapper */; };
+		41D42ED427F9BBA700DABC47 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 41D42ED327F9BBA700DABC47 /* Realm */; };
+		41D42ED627F9BBA700DABC47 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 41D42ED527F9BBA700DABC47 /* RealmSwift */; };
 		41E817F927CF61D000412250 /* UIImageView (load URL).swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E817F827CF61D000412250 /* UIImageView (load URL).swift */; };
 		41E817FF27CF633900412250 /* GetPhotosFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E817FE27CF633900412250 /* GetPhotosFriend.swift */; };
 		41E8180127CF636600412250 /* GetGroupsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8180027CF636600412250 /* GetGroupsList.swift */; };
@@ -107,12 +107,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4149605427F233B8007BF140 /* RealmSwift in Frameworks */,
-				4149604E27F22DFF007BF140 /* Kingfisher in Frameworks */,
+				41D42ED627F9BBA700DABC47 /* RealmSwift in Frameworks */,
+				41D42ECE27F9B7E600DABC47 /* Kingfisher in Frameworks */,
 				417A1DF227D92359003DF7FB /* WebKit.framework in Frameworks */,
+				41D42ED127F9B82400DABC47 /* SwiftKeychainWrapper in Frameworks */,
 				63968843D639A5FC051BD792 /* Pods_Client_VK.framework in Frameworks */,
-				4149604B27F22DD6007BF140 /* SwiftKeychainWrapper in Frameworks */,
-				4149605227F233B8007BF140 /* Realm in Frameworks */,
+				41D42ED427F9BBA700DABC47 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +263,10 @@
 			);
 			name = "Client VK";
 			packageProductDependencies = (
-				4149604A27F22DD6007BF140 /* SwiftKeychainWrapper */,
-				4149604D27F22DFF007BF140 /* Kingfisher */,
-				4149605127F233B8007BF140 /* Realm */,
-				4149605327F233B8007BF140 /* RealmSwift */,
+				41D42ECD27F9B7E600DABC47 /* Kingfisher */,
+				41D42ED027F9B82400DABC47 /* SwiftKeychainWrapper */,
+				41D42ED327F9BBA700DABC47 /* Realm */,
+				41D42ED527F9BBA700DABC47 /* RealmSwift */,
 			);
 			productName = "Client VK";
 			productReference = D96DF50124557A47005CC3BA /* Client VK.app */;
@@ -297,9 +297,9 @@
 			);
 			mainGroup = D96DF4F824557A47005CC3BA;
 			packageReferences = (
-				4149604927F22DD6007BF140 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
-				4149604C27F22DFF007BF140 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				4149605027F233B8007BF140 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				41D42ECC27F9B7E600DABC47 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				41D42ECF27F9B82400DABC47 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				41D42ED227F9BBA700DABC47 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = D96DF50224557A47005CC3BA /* Products */;
 			projectDirPath = "";
@@ -611,15 +611,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4149604927F22DD6007BF140 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-		4149604C27F22DFF007BF140 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		41D42ECC27F9B7E600DABC47 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -627,7 +619,15 @@
 				kind = branch;
 			};
 		};
-		4149605027F233B8007BF140 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		41D42ECF27F9B82400DABC47 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		41D42ED227F9BBA700DABC47 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
@@ -638,24 +638,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4149604A27F22DD6007BF140 /* SwiftKeychainWrapper */ = {
+		41D42ECD27F9B7E600DABC47 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4149604927F22DD6007BF140 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
-			productName = SwiftKeychainWrapper;
-		};
-		4149604D27F22DFF007BF140 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4149604C27F22DFF007BF140 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 41D42ECC27F9B7E600DABC47 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		4149605127F233B8007BF140 /* Realm */ = {
+		41D42ED027F9B82400DABC47 /* SwiftKeychainWrapper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4149605027F233B8007BF140 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 41D42ECF27F9B82400DABC47 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+		41D42ED327F9BBA700DABC47 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41D42ED227F9BBA700DABC47 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		4149605327F233B8007BF140 /* RealmSwift */ = {
+		41D42ED527F9BBA700DABC47 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4149605027F233B8007BF140 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 41D42ED227F9BBA700DABC47 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
