@@ -9,6 +9,9 @@
 import UIKit
 
 class LoginFormController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var LoginVK: UIButton!
+
+    @IBOutlet weak var Entry: UIButton!
     
     let session = Session.instance //синглтон для хранения данных о текущей сессии
     
@@ -23,6 +26,22 @@ class LoginFormController: UIViewController, UITextFieldDelegate {
         // * делегаты для переноса фокуса на следующее поле ввода
         self.loginTextField.delegate = self
         self.passwordTextField.delegate = self
+//        меняем стиль кнопок
+        LoginVK.layer.cornerRadius = 15
+        LoginVK.layer.cornerCurve = .continuous
+
+        Entry.layer.cornerRadius = 15
+        Entry.layer.cornerCurve = .continuous
+        
+        LoginVK.layer.shadowColor = UIColor (named: "Shadow")! .cgColor
+        LoginVK.layer.shadowOpacity = 0.5
+        LoginVK.layer.shadowOffset = CGSize(width: 0, height: 10)
+        LoginVK.layer.shadowRadius = 20
+        
+        Entry.layer.shadowColor = UIColor (named: "Shadow")! .cgColor
+        Entry.layer.shadowOpacity = 0.5
+        Entry.layer.shadowOffset = CGSize(width: 0, height: 10)
+        Entry.layer.shadowRadius = 20
         
     }
     

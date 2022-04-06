@@ -21,6 +21,21 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="6jK-KH-fDy">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvh-b0-d9B">
+                                        <rect key="frame" x="50" y="574" width="314" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                        <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <state key="normal" title="Войти через VK"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="DXN-Lu-crJ" kind="show" identifier="" id="cc6-Jt-K0X"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="пароль" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-wF-J7M">
                                         <rect key="frame" x="50" y="431" width="314" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -55,37 +70,6 @@
                                             <action selector="loginPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rn-df-uPJ"/>
                                         </connections>
                                     </button>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwq-ds-aUv" customClass="LoadingAnimationView" customModule="Client_VK" customModuleProvider="target">
-                                        <rect key="frame" x="167" y="539" width="80" height="20"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Emr-AW-1I0"/>
-                                            <constraint firstAttribute="width" constant="80" id="HKh-s7-3Vb"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3c-Ju-xOp" customClass="CloudAnimationView" customModule="Client_VK" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="233" width="120" height="60"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="Rwk-eS-pHA"/>
-                                            <constraint firstAttribute="height" constant="60" id="SX3-hs-a3A"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvh-b0-d9B">
-                                        <rect key="frame" x="50" y="574" width="314" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
-                                        <state key="normal" title="Войти через VK"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="DXN-Lu-crJ" kind="show" identifier="" id="cc6-Jt-K0X"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4ni-wF-J7M" firstAttribute="top" secondItem="6cc-f4-FMi" secondAttribute="bottom" constant="20" id="3mh-EJ-Wls"/>
@@ -98,11 +82,7 @@
                                     <constraint firstItem="YMo-Ac-YEI" firstAttribute="width" secondItem="6cc-f4-FMi" secondAttribute="width" id="US7-aJ-op8"/>
                                     <constraint firstItem="YMo-Ac-YEI" firstAttribute="top" secondItem="4ni-wF-J7M" secondAttribute="bottom" constant="20" id="aAK-d5-Q9U"/>
                                     <constraint firstItem="6cc-f4-FMi" firstAttribute="top" secondItem="yka-5I-cxK" secondAttribute="bottom" constant="30" id="aYE-7g-S1T"/>
-                                    <constraint firstItem="yka-5I-cxK" firstAttribute="top" secondItem="v3c-Ju-xOp" secondAttribute="bottom" constant="30" id="dlO-f7-IyL"/>
-                                    <constraint firstItem="v3c-Ju-xOp" firstAttribute="centerX" secondItem="6jK-KH-fDy" secondAttribute="centerX" id="hEU-6z-0NI"/>
                                     <constraint firstItem="2mE-xs-QBo" firstAttribute="bottom" secondItem="YMo-Ac-YEI" secondAttribute="bottom" constant="20" id="hG5-df-l2A"/>
-                                    <constraint firstItem="uwq-ds-aUv" firstAttribute="top" secondItem="YMo-Ac-YEI" secondAttribute="bottom" constant="20" id="i3r-1e-4WT"/>
-                                    <constraint firstItem="uwq-ds-aUv" firstAttribute="centerX" secondItem="6jK-KH-fDy" secondAttribute="centerX" id="jpw-8M-pt5"/>
                                     <constraint firstItem="Rvh-b0-d9B" firstAttribute="top" secondItem="YMo-Ac-YEI" secondAttribute="bottom" constant="55" id="lQP-bu-aqU"/>
                                     <constraint firstItem="YMo-Ac-YEI" firstAttribute="centerX" secondItem="6jK-KH-fDy" secondAttribute="centerX" id="pGE-Mz-noX"/>
                                     <constraint firstItem="Rvh-b0-d9B" firstAttribute="centerX" secondItem="YMo-Ac-YEI" secondAttribute="centerX" id="q3k-UJ-TbW"/>
@@ -126,6 +106,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="daz-cv-DxR"/>
                     <connections>
+                        <outlet property="Entry" destination="YMo-Ac-YEI" id="gDz-r4-T1O"/>
+                        <outlet property="LoginTextField" destination="6cc-f4-FMi" id="dJt-7E-kcp"/>
+                        <outlet property="LoginVK" destination="Rvh-b0-d9B" id="6XU-Mf-CdE"/>
+                        <outlet property="PasswordTextField" destination="4ni-wF-J7M" id="SUK-Tg-ni6"/>
                         <outlet property="loginTextField" destination="6cc-f4-FMi" id="v3f-nY-2wb"/>
                         <outlet property="passwordTextField" destination="4ni-wF-J7M" id="IS2-m2-Ast"/>
                         <outlet property="scrollViewLogin" destination="6jK-KH-fDy" id="7yS-TL-bQ6"/>
