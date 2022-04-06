@@ -68,7 +68,7 @@ class GetFriendsList {
             URLQueryItem(name: "user_id", value: String(Session.instance.userId)),
             URLQueryItem(name: "fields", value: "photo_50"),
             URLQueryItem(name: "access_token", value: Session.instance.token),
-            URLQueryItem(name: "v", value: "5.122")
+            URLQueryItem(name: "v", value: "5.131")
         ]
         
         // задача для запуска
