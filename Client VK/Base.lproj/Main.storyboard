@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -21,6 +22,9 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="6jK-KH-fDy">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background01" translatesAutoresizingMaskIntoConstraints="NO" id="KcP-k7-xXL">
+                                        <rect key="frame" x="0.0" y="431.5" width="414" height="464.5"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvh-b0-d9B">
                                         <rect key="frame" x="50" y="574" width="314" height="34"/>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -77,6 +81,7 @@
                                     <constraint firstItem="4ni-wF-J7M" firstAttribute="centerX" secondItem="6jK-KH-fDy" secondAttribute="centerX" id="8fz-Jp-DDL"/>
                                     <constraint firstItem="6cc-f4-FMi" firstAttribute="centerX" secondItem="6jK-KH-fDy" secondAttribute="centerX" id="IgJ-XD-M63"/>
                                     <constraint firstItem="6cc-f4-FMi" firstAttribute="leading" secondItem="6jK-KH-fDy" secondAttribute="leading" priority="900" constant="50" id="L5W-IL-GFw"/>
+                                    <constraint firstItem="KcP-k7-xXL" firstAttribute="trailing" secondItem="7JP-Ik-u2B" secondAttribute="trailing" id="LZv-Dp-uFC"/>
                                     <constraint firstAttribute="trailing" secondItem="6cc-f4-FMi" secondAttribute="trailing" priority="900" constant="50" id="QWk-bY-IO4"/>
                                     <constraint firstItem="4ni-wF-J7M" firstAttribute="width" secondItem="6cc-f4-FMi" secondAttribute="width" id="RlC-P5-3gT"/>
                                     <constraint firstItem="YMo-Ac-YEI" firstAttribute="width" secondItem="6cc-f4-FMi" secondAttribute="width" id="US7-aJ-op8"/>
@@ -87,6 +92,8 @@
                                     <constraint firstItem="YMo-Ac-YEI" firstAttribute="centerX" secondItem="6jK-KH-fDy" secondAttribute="centerX" id="pGE-Mz-noX"/>
                                     <constraint firstItem="Rvh-b0-d9B" firstAttribute="centerX" secondItem="YMo-Ac-YEI" secondAttribute="centerX" id="q3k-UJ-TbW"/>
                                     <constraint firstItem="Rvh-b0-d9B" firstAttribute="height" secondItem="YMo-Ac-YEI" secondAttribute="height" id="rId-sC-Dam"/>
+                                    <constraint firstItem="KcP-k7-xXL" firstAttribute="bottom" secondItem="7JP-Ik-u2B" secondAttribute="bottom" id="tZE-JC-B5b"/>
+                                    <constraint firstItem="KcP-k7-xXL" firstAttribute="leading" secondItem="7JP-Ik-u2B" secondAttribute="leading" id="uZF-AG-WZz"/>
                                     <constraint firstItem="4ni-wF-J7M" firstAttribute="centerY" secondItem="6jK-KH-fDy" secondAttribute="centerY" id="w2m-rc-2Fe"/>
                                     <constraint firstItem="Rvh-b0-d9B" firstAttribute="width" secondItem="YMo-Ac-YEI" secondAttribute="width" id="yUW-xU-HkK"/>
                                     <constraint firstItem="yka-5I-cxK" firstAttribute="width" secondItem="6cc-f4-FMi" secondAttribute="width" id="zEz-Xv-pID"/>
@@ -129,6 +136,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="TabBarTint"/>
+                        <tabBarAppearance key="standardAppearance" backgroundEffect="systemUltraThinMaterialLight"/>
                     </tabBar>
                     <connections>
                         <segue destination="aoW-ov-lxy" kind="relationship" relationship="viewControllers" id="vBY-7b-gri"/>
@@ -824,6 +833,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background01" width="330" height="464.5"/>
         <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
         <image name="eye" catalog="system" width="128" height="81"/>
         <image name="message" catalog="system" width="128" height="113"/>
@@ -832,6 +842,9 @@
         <image name="person.2" catalog="system" width="128" height="81"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="rectangle.stack" catalog="system" width="128" height="122"/>
+        <namedColor name="TabBarTint">
+            <color red="0.38400000333786011" green="0.20399999618530273" blue="0.83499997854232788" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -155,7 +155,6 @@ class GetNewsList {
             URLQueryItem(name: "owner_id", value: String(Session.instance.userId)),
             URLQueryItem(name: "access_token", value: Session.instance.token),
             URLQueryItem(name: "filters", value: "post,photo"),
-            URLQueryItem(name: "count", value: "10"),
             URLQueryItem(name: "v", value: "5.131")
         ]
               
@@ -203,8 +202,6 @@ class GetNewsList {
                     let views = arrayNews.response.items[i].views.count
 
                    
-                // имена и аватарки групп
-                   // много вложенных циклов!
                     let sourceID = arrayNews.response.items[i].sourceID * -1
                     for i in 0...arrayNews.response.groups.count-1 {
                         if arrayNews.response.groups[i].id == sourceID {
@@ -212,16 +209,9 @@ class GetNewsList {
                             avatar = arrayNews.response.groups[i].avatar
                         }
                     }
-//                    print(arrayNews.response.groups.map { $0.id })
-//                    if arrayNews.response.groups.contains(where: { $0.id == sourceID }){
-//
-//                    }
-//
-//                    print(arrayNews.response.groups.map { $0.id == sourceID })
                     
                     newsList.append(PostNews(name: name, avatar: avatar, date: strDate, textNews: text, imageNews: urlImg, likes: likes, comments: comments, reposts: reposts, views: views))
                 }
-                
                 return complition(newsList)
                 
             } catch let error {
