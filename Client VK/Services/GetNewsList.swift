@@ -200,8 +200,6 @@ class GetNewsList {
                     let comments = arrayNews.response.items[i].comments.count
                     let reposts = arrayNews.response.items[i].reposts.count
                     let views = arrayNews.response.items[i].views.count
-
-                   
                     let sourceID = arrayNews.response.items[i].sourceID * -1
                     for i in 0...arrayNews.response.groups.count-1 {
                         if arrayNews.response.groups[i].id == sourceID {

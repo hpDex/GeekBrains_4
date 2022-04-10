@@ -97,7 +97,6 @@ class FriendsTableViewController: UITableViewController, UISearchBarDelegate {
         let avatar = ImageResource(downloadURL: imgUrl) //работает через Kingfisher
         cell.avatarFriendView.avatarImage.kf.indicatorType = .activity
         cell.avatarFriendView.avatarImage.kf.setImage(with: avatar)
-       
         return cell
     }
     

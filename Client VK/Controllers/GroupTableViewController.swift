@@ -9,7 +9,6 @@
 import UIKit
 import Kingfisher
 import RealmSwift
-import FirebaseDatabase
 
 class GroupTableViewController: UITableViewController {
     
@@ -19,7 +18,8 @@ class GroupTableViewController: UITableViewController {
         subscribeToNotificationRealm() // загрузка данных из реалма (кэш) для первоначального отображения
 
         // запуск обновления данных из сети, запись в Реалм и загрузка из реалма новых данных
-        GetGroupsList().loadData()
+        //GetGroupsList().loadData() // обычный способ
+        GetGroupsListOperations().getData() // способ с примененением Operations
     }
     
     var realm: Realm = {
@@ -117,7 +117,7 @@ class GroupTableViewController: UITableViewController {
                     //добавить новой группы в мои группы из общего списка групп
                     let newGroup = newGroupFromController.GroupsList[indexPath.row]
                     
-    //                // проверка что группа уже в списке (нужен Equatable)
+                    // проверка что группа уже в списке (нужен Equatable)
                     guard myGroups.description.contains(newGroup.groupName) == false else { return }
                     
                     // добавить новую группу (не нужно, так как все берется из Реалма)
@@ -131,42 +131,9 @@ class GroupTableViewController: UITableViewController {
                     } catch {
                         print(error)
                     }
-                    
-                    writeNewGroupToFirebase(newGroup) // работа с Firebase
-                    
                 }
             }
         }
-    
-    // MARK:  - Firebase
-    
-    private func writeNewGroupToFirebase(_ newGroup: Group){
-        // работаем с Firebase
-        let database = Database.database()
-        // путь к нужному пользователю в Firebase (тот кто залогинился уже есть базе, другие не интересны)
-        let ref: DatabaseReference = database.reference(withPath: "All logged users").child(String(Session.instance.userId))
-        
-        // чтение из Firebase
-        ref.observe(.value) { snapshot in
-            
-            let groupsIDs = snapshot.children.compactMap { $0 as? DataSnapshot }
-                .compactMap { $0.key }
-            
-            // проверка есть ли ID группы в Firebase
-            guard groupsIDs.contains(String(newGroup.id)) == false else { return }
-    
-            //ref.removeAllObservers() // отписываемся от уведомлений, чтобы не происходило изменений при изменении базы
-            ref.child(String(newGroup.id)).setValue(newGroup.groupName) // записываем новую группу в Firebase
-            
-            print("Для пользователя с ID: \(String(Session.instance.userId)) в Firebase записана группа:\n\(newGroup.groupName)")
-            
-            let groups = snapshot.children.compactMap { $0 as? DataSnapshot }
-            .compactMap { $0.value }
-            
-            print("\nРанее добавленные в Firebase группы пользователя с ID \(String(Session.instance.userId)):\n\(groups)")
-            ref.removeAllObservers() // отписываемся от уведомлений, чтобы не происходило изменений при записи в базу
-        }
-    }
     
 
 }

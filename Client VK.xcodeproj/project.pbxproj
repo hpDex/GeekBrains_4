@@ -19,6 +19,7 @@
 		4149605227F233B8007BF140 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4149605127F233B8007BF140 /* Realm */; };
 		4149605427F233B8007BF140 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4149605327F233B8007BF140 /* RealmSwift */; };
 		415346D727FC84B000D54B70 /* GetNewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415346D627FC84B000D54B70 /* GetNewsList.swift */; };
+		4176DDCA2802F82900DB869D /* GetGroupListOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176DDC92802F82900DB869D /* GetGroupListOperations.swift */; };
 		417A1DEC27D8F2D0003DF7FB /* SearchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A1DEB27D8F2D0003DF7FB /* SearchGroup.swift */; };
 		417A1DEE27D8F329003DF7FB /* RealmOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A1DED27D8F329003DF7FB /* RealmOperations.swift */; };
 		417A1DF027D90884003DF7FB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A1DEF27D90884003DF7FB /* Photo.swift */; };
@@ -67,6 +68,7 @@
 		4144848C27C39C9000BDFBCE /* NewGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupTableViewCell.swift; sourceTree = "<group>"; };
 		4144848E27C39CBF00BDFBCE /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		415346D627FC84B000D54B70 /* GetNewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNewsList.swift; sourceTree = "<group>"; };
+		4176DDC92802F82900DB869D /* GetGroupListOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupListOperations.swift; sourceTree = "<group>"; };
 		417A1DEB27D8F2D0003DF7FB /* SearchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroup.swift; sourceTree = "<group>"; };
 		417A1DED27D8F329003DF7FB /* RealmOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmOperations.swift; sourceTree = "<group>"; };
 		417A1DEF27D90884003DF7FB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -125,12 +127,13 @@
 			isa = PBXGroup;
 			children = (
 				41E817FE27CF633900412250 /* GetPhotosFriend.swift */,
-				41E8180027CF636600412250 /* GetGroupsList.swift */,
 				41E8180227CF639600412250 /* GetFriendsList.swift */,
 				417A1DEB27D8F2D0003DF7FB /* SearchGroup.swift */,
 				413B5FB227F0BE01008B3667 /* VKService.swift */,
 				417A1DED27D8F329003DF7FB /* RealmOperations.swift */,
 				415346D627FC84B000D54B70 /* GetNewsList.swift */,
+				41E8180027CF636600412250 /* GetGroupsList.swift */,
+				4176DDC92802F82900DB869D /* GetGroupListOperations.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				D9DC48ED2485937A00251429 /* FriendsPhotosViewController.swift in Sources */,
 				D9E13E2124CAEB3E00370B7E /* Session.swift in Sources */,
 				D98FD8E5246DCF0E0080057D /* PhotosFriendCollectionViewController.swift in Sources */,
+				4176DDCA2802F82900DB869D /* GetGroupListOperations.swift in Sources */,
 				413B5FB327F0BE01008B3667 /* VKService.swift in Sources */,
 				D9A5DAC524C5E325006D3E55 /* Group.swift in Sources */,
 				419B807927F4CC00009C954E /* GroupFirebase.swift in Sources */,
