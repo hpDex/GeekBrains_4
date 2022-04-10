@@ -113,10 +113,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="daz-cv-DxR"/>
                     <connections>
-                        <outlet property="Entry" destination="YMo-Ac-YEI" id="gDz-r4-T1O"/>
-                        <outlet property="LoginTextField" destination="6cc-f4-FMi" id="dJt-7E-kcp"/>
-                        <outlet property="LoginVK" destination="Rvh-b0-d9B" id="6XU-Mf-CdE"/>
-                        <outlet property="PasswordTextField" destination="4ni-wF-J7M" id="SUK-Tg-ni6"/>
                         <outlet property="loginTextField" destination="6cc-f4-FMi" id="v3f-nY-2wb"/>
                         <outlet property="passwordTextField" destination="4ni-wF-J7M" id="IS2-m2-Ast"/>
                         <outlet property="scrollViewLogin" destination="6jK-KH-fDy" id="7yS-TL-bQ6"/>
