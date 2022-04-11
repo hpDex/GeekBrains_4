@@ -69,7 +69,7 @@ final class VKService {
         
         let basicQueryItems = [
             URLQueryItem(name: "access_token", value: Session.instance.token),
-            URLQueryItem(name: "v", value: "5.122")
+            URLQueryItem(name: "v", value: "5.131")
         ]
         let additionalQueryItems = method.parameters.map{ URLQueryItem(name: $0, value: $1) } //преобразуем словарь в нужный формат
         urlConstructor.queryItems = basicQueryItems + additionalQueryItems
