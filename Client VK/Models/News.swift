@@ -1,5 +1,5 @@
 //
-//  PostNews.swift
+//  News.swift
 //  Client VK
 //
 //  Created by DENIS FILIPPOV on 20.02.2022.

@@ -24,6 +24,8 @@
 		417A1DEE27D8F329003DF7FB /* RealmOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A1DED27D8F329003DF7FB /* RealmOperations.swift */; };
 		417A1DF027D90884003DF7FB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A1DEF27D90884003DF7FB /* Photo.swift */; };
 		417A1DF227D92359003DF7FB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417A1DF127D92359003DF7FB /* WebKit.framework */; };
+		41918A402804536D00AEEADF /* GetFriendsListPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41918A3F2804536D00AEEADF /* GetFriendsListPromise.swift */; };
+		41918A432804543700AEEADF /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41918A422804543700AEEADF /* PromiseKit */; };
 		419B807927F4CC00009C954E /* GroupFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B807827F4CC00009C954E /* GroupFirebase.swift */; };
 		41BB8A3027F4E3B900B18AE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41BB8A2F27F4E3B900B18AE2 /* GoogleService-Info.plist */; };
 		41E817F927CF61D000412250 /* UIImageView (load URL).swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E817F827CF61D000412250 /* UIImageView (load URL).swift */; };
@@ -73,6 +75,7 @@
 		417A1DED27D8F329003DF7FB /* RealmOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmOperations.swift; sourceTree = "<group>"; };
 		417A1DEF27D90884003DF7FB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		417A1DF127D92359003DF7FB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		41918A3F2804536D00AEEADF /* GetFriendsListPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendsListPromise.swift; sourceTree = "<group>"; };
 		419B807827F4CC00009C954E /* GroupFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFirebase.swift; sourceTree = "<group>"; };
 		41BB8A2F27F4E3B900B18AE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		41E817F827CF61D000412250 /* UIImageView (load URL).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView (load URL).swift"; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 				417A1DF227D92359003DF7FB /* WebKit.framework in Frameworks */,
 				63968843D639A5FC051BD792 /* Pods_Client_VK.framework in Frameworks */,
 				4149604B27F22DD6007BF140 /* SwiftKeychainWrapper in Frameworks */,
+				41918A432804543700AEEADF /* PromiseKit in Frameworks */,
 				4149605227F233B8007BF140 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +138,7 @@
 				415346D627FC84B000D54B70 /* GetNewsList.swift */,
 				41E8180027CF636600412250 /* GetGroupsList.swift */,
 				4176DDC92802F82900DB869D /* GetGroupListOperations.swift */,
+				41918A3F2804536D00AEEADF /* GetFriendsListPromise.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				4149604D27F22DFF007BF140 /* Kingfisher */,
 				4149605127F233B8007BF140 /* Realm */,
 				4149605327F233B8007BF140 /* RealmSwift */,
+				41918A422804543700AEEADF /* PromiseKit */,
 			);
 			productName = "Client VK";
 			productReference = D96DF50124557A47005CC3BA /* Client VK.app */;
@@ -306,6 +312,7 @@
 				4149604927F22DD6007BF140 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 				4149604C27F22DFF007BF140 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				4149605027F233B8007BF140 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				41918A412804543700AEEADF /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = D96DF50224557A47005CC3BA /* Products */;
 			projectDirPath = "";
@@ -409,6 +416,7 @@
 				4176DDCA2802F82900DB869D /* GetGroupListOperations.swift in Sources */,
 				413B5FB327F0BE01008B3667 /* VKService.swift in Sources */,
 				D9A5DAC524C5E325006D3E55 /* Group.swift in Sources */,
+				41918A402804536D00AEEADF /* GetFriendsListPromise.swift in Sources */,
 				419B807927F4CC00009C954E /* GroupFirebase.swift in Sources */,
 				41E8180127CF636600412250 /* GetGroupsList.swift in Sources */,
 				417A1DEC27D8F2D0003DF7FB /* SearchGroup.swift in Sources */,
@@ -643,6 +651,14 @@
 				kind = branch;
 			};
 		};
+		41918A412804543700AEEADF /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -665,6 +681,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4149605027F233B8007BF140 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		41918A422804543700AEEADF /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41918A412804543700AEEADF /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
