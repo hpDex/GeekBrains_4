@@ -23,9 +23,6 @@ struct FriendsResponse: Decodable {
             var avatar: String
             var deactivated: String?
             
-            // enum и init нужны если нужно иметь другие названия переменных в отличии от даннных в json
-            // например: logo = "photo_50" (я хочу: logo, а в jsone это: photo_50 )
-            // но все равно нужно указать другие значения, например: id (без уточнения)
             private enum CodingKeys: String, CodingKey {
                 case id
                 case firstName = "first_name"
@@ -68,7 +65,7 @@ class GetFriendsList {
             URLQueryItem(name: "user_id", value: String(Session.instance.userId)),
             URLQueryItem(name: "fields", value: "photo_50"),
             URLQueryItem(name: "access_token", value: Session.instance.token),
-            URLQueryItem(name: "v", value: "5.122")
+            URLQueryItem(name: "v", value: "5.131")
         ]
         
         // задача для запуска

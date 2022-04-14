@@ -41,7 +41,6 @@ class NewGroupTableViewController: UITableViewController, UISearchResultsUpdatin
         // получение данный json в зависимости от требования
         SearchGroup().loadData(searchText: searchText) { [weak self] (complition) in
             DispatchQueue.main.async {
-                //print(complition)
                 self?.GroupsList = complition
                 self?.tableView.reloadData()
             }

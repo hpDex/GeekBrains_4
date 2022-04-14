@@ -66,7 +66,7 @@ class GetPhotosFriend {
         urlConstructor.queryItems = [
             URLQueryItem(name: "owner_id", value: ownerID),
             URLQueryItem(name: "access_token", value: Session.instance.token),
-            URLQueryItem(name: "v", value: "5.122")
+            URLQueryItem(name: "v", value: "5.131")
         ]
               
         // задача для запуска

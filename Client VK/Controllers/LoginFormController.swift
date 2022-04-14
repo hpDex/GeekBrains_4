@@ -23,7 +23,6 @@ class LoginFormController: UIViewController, UITextFieldDelegate {
         // * делегаты для переноса фокуса на следующее поле ввода
         self.loginTextField.delegate = self
         self.passwordTextField.delegate = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
